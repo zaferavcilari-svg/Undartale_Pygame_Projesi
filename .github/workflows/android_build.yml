@@ -1,4 +1,4 @@
-nname: Android Build
+name: Android Build
 
 on: [push]
 
@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4  # Sadece v4 oldu
+    - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4  # Sadece v4 oldu
+      uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
@@ -21,7 +21,7 @@ jobs:
       run: buildozer android debug
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4  # Sadece v4 oldu
+      uses: actions/upload-artifact@v4
       with:
         name: android-build-apk
         path: bin/*.apk
