@@ -31,9 +31,8 @@ orientation = portrait
 # Android specific
 #
 
-# 🛑 Aidl hatası çözümü: Buildozer'a android araçlarının yolunu zorla gösteriyoruz
-android.force_path = True
-android.tools_path = /opt/hosttoolchains/android/platform-tools
+# NOT: Aidl hatası için manuel yol belirten satırları sildik. 
+# Artık Buildozer'ın yolu kendisinin bulmasını zorlayacağız.
 
 # (int) Target Android API, should be as high as possible.
 android.api = 31
