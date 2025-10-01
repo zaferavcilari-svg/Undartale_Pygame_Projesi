@@ -7,15 +7,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    
+    - uses: actions/checkout@v4  # Güncel versiyon
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.8'
+        python-version: '3.8'  # distutils hatası için sabitlendi
 
     - name: Install Buildozer
       run: pip install buildozer
+
+    - name: Install Cython
+      run: pip install cython  # Cython hatası için eklendi
 
     - name: Run Buildozer
       run: buildozer android debug
