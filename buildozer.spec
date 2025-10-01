@@ -31,7 +31,7 @@ orientation = portrait
 # Android specific
 #
 
-# 🛑 NDK yolunu manuel zorlama
+# 🛑 NDK yolunu manuel zorlama (Çözüm 1)
 android.ndk_path = /home/runner/.buildozer/android/platform/android-ndk
 
 # (int) Target Android API, should be as high as possible.
