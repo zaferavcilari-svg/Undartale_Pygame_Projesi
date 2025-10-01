@@ -20,11 +20,12 @@ jobs:
     - name: Install Cython
       run: pip install cython # Cython hatası çözüldü
 
+    # 🛑 NİHAİ VE KESİN LİSANS ÇÖZÜMÜ (Lisans dosyalarını doğrudan oluşturma)
     - name: Accept SDK Licenses
-      run: yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses || true # SON VE KESİN LİSANS ÇÖZÜMÜ
-      
-    - name: Force Update and Install Tools
-      run: buildozer android update # Aidl hatasını çözmek için zorla güncelleme
+      run: |
+        mkdir -p $ANDROID_SDK_ROOT/licenses/
+        echo "84831b94d134079366e563e8a270a416a945620b" > $ANDROID_SDK_ROOT/licenses/android-sdk-license
+        echo "8933cc444451c1a2f3a77618fe1c26e94d0a24ee" > $ANDROID_SDK_ROOT/licenses/android-ndk-license
 
     - name: Run Buildozer
       run: buildozer android debug
