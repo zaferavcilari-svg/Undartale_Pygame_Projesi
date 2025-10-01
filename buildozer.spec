@@ -31,8 +31,8 @@ orientation = portrait
 # Android specific
 #
 
-# NOT: Aidl hatası için manuel yol belirten satırları sildik. 
-# Artık Buildozer'ın yolu kendisinin bulmasını zorlayacağız.
+# 🛑 NDK yolunu manuel zorlama
+android.ndk_path = /home/runner/.buildozer/android/platform/android-ndk
 
 # (int) Target Android API, should be as high as possible.
 android.api = 31
