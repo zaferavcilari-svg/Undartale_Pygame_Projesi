@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = undertale Projesi
+title = undertale projesi
 
 # (str) Package name
 package.name = undertaleprojesi
@@ -13,7 +13,6 @@ package.domain = com.yildirim123
 source.dir = .
 
 # (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
 requirements = python3,kivy,pygame
 
 # (str) Name of the Python file with the application entrypoint (usually main.py)
@@ -26,12 +25,15 @@ source.include_exts = py,png,jpg,kv,atlas,wav,ogg,mp3,ttf
 version = 0.1
 
 # (list) Supported orientations
-# Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
 orientation = portrait
 
 #
 # Android specific
 #
+
+# 🛑 Aidl hatası çözümü: Buildozer'a android araçlarının yolunu zorla gösteriyoruz
+android.force_path = True
+android.tools_path = /opt/hosttoolchains/android/platform-tools
 
 # (int) Target Android API, should be as high as possible.
 android.api = 31
