@@ -19,6 +19,9 @@ jobs:
 
     - name: Install Cython
       run: pip install cython # Cython hatası çözüldü
+
+    - name: Accept SDK Licenses
+      run: yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses || true # SON VE KESİN LİSANS ÇÖZÜMÜ
       
     - name: Force Update and Install Tools
       run: buildozer android update # Aidl hatasını çözmek için zorla güncelleme
